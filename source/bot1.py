@@ -1,12 +1,25 @@
 import discord
+import csv
 import time_reader
 import data_maker2
 from discord.ext import tasks
+
+'''
+made by climentia
+Created in 2022
+Rights reserved by @climentia
+'''
+
 
 TOKEN = 'MTAxODE0NDI0NTQ2MDI0MjQzMw.GItw2U.1QcKusBuOolDYZksJqRC-SR8mZiJ96Q7RsL-Kg'
 intents = discord.Intents.default()  # デフォルトのIntentsオブジェクトを生成
 intents.typing = False  # typingを受け取らないように
 client = discord.Client(intents=intents)
+
+with open('../token.txt') as f:
+    reader = csv.reader(f)
+    for row in reader:
+        TOKEN = row[1]
 
 """@client.event
 async def on_message(message):
