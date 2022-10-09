@@ -11,7 +11,6 @@ Rights reserved by @climentia
 '''
 
 
-TOKEN = 'MTAxODE0NDI0NTQ2MDI0MjQzMw.GItw2U.1QcKusBuOolDYZksJqRC-SR8mZiJ96Q7RsL-Kg'
 intents = discord.Intents.default()  # デフォルトのIntentsオブジェクトを生成
 intents.typing = False  # typingを受け取らないように
 client = discord.Client(intents=intents)
