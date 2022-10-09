@@ -36,12 +36,12 @@ async def send_message_every_60sec():
     tr = time_reader.TimeReader()
     dt = tr.get_time()
     # 指定時間のとき
-    if (dt.weekday() == 6) and (dt.hour == 20) and (dt.minute == 35):
+    if (dt.weekday() == 6) and (dt.hour == 16) and (dt.minute == 10):
         # channel = client.get_channel(CHANNEL_ID)
         dm = data_maker2.DataMaker()
         dm_a = dm.stock_year_figure_maker()
         dm_m = dm.stock_month_figure_maker()
-        await channel_sent.send(str(dt.month) + "月" +str(dt.month) + "日の株価情報です。\nMonthly chart", file=discord.File("Monthly stock price change.png"))
+        await channel_sent.send(str(dt.month) + "月" +str(dt.day) + "日の株価情報です。\nMonthly chart", file=discord.File("Monthly stock price change.png"))
         await channel_sent.send("Annual chart", file=discord.File("Annual stock price change.png"))
 
 
